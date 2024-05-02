@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <form id="passwordForm">
+            <input type="number" id="length" name="length" min="8" max="50" placeholder="Password Length (8-50)" required>
+            <label><input type="checkbox" name="uppercase" checked> Include Uppercase Letters</label></br>
+            <label><input type="checkbox" name="lowercase" checked> Include Lowercase Letters</label></br>
+            <label><input type="checkbox" name="numbers" checked> Include Numbers</label></br>
+            <label><input type="checkbox" name="symbols"> Include Symbols</label></br>
+            <button type="submit">Generate Password</button></br>
+        </form>
+        <div id="passwordDisplay"></div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
